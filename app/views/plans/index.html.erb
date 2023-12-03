@@ -1,0 +1,48 @@
+<div class="container" id="index-container">
+
+  <div id="table-header">
+    <h2>予定一覧</h2>
+    <button type="button" id="btn-new">＋新規追加</button>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>タイトル</th>
+        <th>開始日</th>
+        <th>終了日</th>
+        <th>終日</th>
+        <th>更新日時</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @plans.each do |plan| %>
+        <tr>
+          <td><%= plan.id %></td>
+          <td><%= plan.title %></td>
+          <td><%= plan.start_date %></td>
+          <td><%= plan.finish_date %></td>
+          <td><%= "○" if plan.all_day %></td>
+          <td><%= plan.updated_at.to_s(:datetime_jp) %></td>
+          <td>詳細</td>
+          <td>編集</td>
+          <td>削除</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div id="table-footer">
+    <div>
+      予定合計 <span id="total-number"><%= @plans.count %></span>件
+    </div>
+    <div id="today-date">
+      本日の日付 <%= @today %>
+    </div>
+  </div>
+
+</div>
