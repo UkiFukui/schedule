@@ -1,8 +1,8 @@
 <div class="container" id="index-container">
 
-  <div id="table-header">
+  <div class="table-header">
     <h2>予定一覧</h2>
-    <button type="button" id="btn-new">＋新規追加</button>
+    <button type="button" class="btn" id="btn-index">＋新規追加</button>
   </div>
 
   <table class="table">
@@ -28,7 +28,7 @@
           <td><%= plan.finish_date %></td>
           <td><%= "○" if plan.all_day %></td>
           <td><%= plan.updated_at.to_s(:datetime_jp) %></td>
-          <td>詳細</td>
+          <td><%= link_to "詳細", plan %></td>
           <td>編集</td>
           <td>削除</td>
         </tr>

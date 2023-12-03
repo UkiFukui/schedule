@@ -1,6 +1,33 @@
-<div class="container">
-  <div>
-    <h2><%= %></h2>
-    <button type="button" id="btn-edit"></button>
+<div class="container" id="show-container">
+
+  <p id="back-index"><%= link_to "← 一覧に戻る", :plans %></p>
+
+  <div class="table-header">
+    <h2><%= @plan.title %></h2>
+    <button type="button" class="btn" id="btn-show">
+      <%= image_tag "pen.png" %> 編集
+    </button>
   </div>
+
+  <div id="table-show-container">
+    <table class="table" id="table-show">
+      <tr>
+        <th>開始日</th>
+        <td><%= @plan.start_date %></td>
+      </tr>
+      <tr>
+        <th>終了日</th>
+        <td><%= @plan.finish_date %></td>
+      </tr>
+      <tr>
+        <th>終日</th>
+        <td><%= "○" if @plan.all_day %></td>
+      </tr>
+      <tr>
+        <th>スケジュールメモ</th>
+        <td><%= @plan.memo %></td>
+      </tr>
+    </table>
+  </div>
+
 </div>

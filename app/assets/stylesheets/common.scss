@@ -9,6 +9,10 @@ header {
   height: 50px;
 }
 
+a {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 13px;
   font-weight: bold;
@@ -16,27 +20,35 @@ h1 {
   line-height: 50px;
 }
 
-#btn-new {
-  background-color: #000066;
-  color: #FFF;
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.btn {
   font-size: 13px;
   font-weight: bold;
   padding: 10px 15px;
+}
+
+#btn-index {
+  background-color: #000066;
+  color: #FFF;
+}
+
+#btn-show {
+  color: #000066;
+  border-color: #000066;
 }
 
 #index-container {
   width: fit-content;
 }
 
-#table-header {
+.table-header {
   display: flex;
   justify-content: space-between;
   margin: 20px auto;
-}
-
-h2 {
-  font-size: 20px;
-  font-weight: bold;
 }
 
 #table-footer {
@@ -54,3 +66,31 @@ h2 {
 #today-date {
   color: #BBBBBB;
 }
+
+#show-container {
+  max-width: 600px;
+}
+
+#back-index {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+#table-show-container {
+  background-color: #FFF;
+  padding: 20px;
+}
+
+#table-show {
+  border: 1px #EEEEEE solid;
+}
+
+#table-show th, #table-show td {
+  padding: 20px;
+}
+
+#table-show th {
+  background-color: #F8F8FF;
+  width: 144px;
+}
+
