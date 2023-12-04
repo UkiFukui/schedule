@@ -9,6 +9,10 @@ class Plan < ApplicationRecord
   private
 
   def greater_than_start_date?
+    if !(start_date) || !(finish_date)
+      return false
+    end
+
     if start_date > finish_date
       errors.add(:finish_date, "終了日は開始日以降の日付で選択してください")
     end
