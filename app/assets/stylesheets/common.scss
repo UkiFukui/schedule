@@ -7,6 +7,7 @@ header {
   background-color: #000066;
   color: #FFF;
   height: 50px;
+  margin-bottom: 20px;
 }
 
 a {
@@ -19,28 +20,30 @@ h1 {
   text-align: center;
   line-height: 50px;
 }
-
 h2 {
   font-size: 20px;
   font-weight: bold;
 }
 
+// ボタン設定
 .btn {
   font-size: 13px;
   font-weight: bold;
   padding: 10px 15px;
 }
-
-#btn-index {
+#btn-new, .btn-save {
   background-color: #000066;
   color: #FFF;
 }
-
-#btn-show {
+.btn-cancel {
+  border-color: #EEEEEE;
+}
+#btn-edit {
   color: #000066;
   border-color: #000066;
 }
 
+// トップページ
 #index-container {
   width: fit-content;
 }
@@ -48,9 +51,8 @@ h2 {
 .table-header {
   display: flex;
   justify-content: space-between;
-  margin: 20px auto;
+  margin-bottom: 20px;
 }
-
 #table-footer {
   background-color: #FFF;
   display: flex;
@@ -62,18 +64,68 @@ h2 {
 #total-number {
   font-weight: bold;
 }
-
 #today-date {
   color: #BBBBBB;
 }
 
+// 新規作成ページ
+
+#new-container {
+  max-width: 600px;
+}
+
+.form {
+  background-color: #FFF;
+  padding: 20px;
+  margin-top: 20px;
+}
+.form-group {
+  margin: 5px;
+}
+
+.required:after {
+  color: red;
+  content: " *";
+}
+
+.date-area {
+  display: flex;
+  justify-content: space-between;
+}
+.date-form {
+  display: inline-block;
+  width: 47%;
+}
+
+div label:first-child {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+div input:last-child:not(.btn),
+textarea {
+  width: 100%;
+  border: 1px #EEEEEE solid;
+  height: 40px;
+  padding: 10px;
+}
+
+textarea {
+min-height: 100px;
+}
+
+.button-area {
+  display: flex;
+  justify-content: right;
+}
+
+// 詳細ページ
 #show-container {
   max-width: 600px;
 }
 
-#back-index {
+#back-to-index {
   font-weight: bold;
-  margin-top: 20px;
 }
 
 #table-show-container {
@@ -84,13 +136,10 @@ h2 {
 #table-show {
   border: 1px #EEEEEE solid;
 }
-
 #table-show th, #table-show td {
   padding: 20px;
 }
-
 #table-show th {
   background-color: #F8F8FF;
   width: 144px;
 }
-

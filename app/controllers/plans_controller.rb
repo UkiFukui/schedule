@@ -5,9 +5,17 @@ class PlansController < ApplicationController
   end
 
   def new
+    @plan = Plan.new
   end
 
   def create
+    @plan = Plan.new(params.require(:plan).permit(:title, :start_date, :finish_date, :all_day, :memo))
+    if @plan.save
+      # flash[:notice] = "スケジュールを登録しました"
+      redirect_to :plans
+    else
+      render "new"
+    end
   end
 
   def show

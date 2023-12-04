@@ -1,10 +1,10 @@
 <div class="container" id="show-container">
 
-  <p id="back-index"><%= link_to "← 一覧に戻る", :plans %></p>
+  <p id="back-to-index"><%= link_to "← 一覧に戻る", :plans %></p>
 
   <div class="table-header">
     <h2><%= @plan.title %></h2>
-    <button type="button" class="btn" id="btn-show">
+    <button type="button" class="btn" id="btn-edit">
       <%= image_tag "pen.png" %> 編集
     </button>
   </div>
