@@ -37,5 +37,9 @@ class PlansController < ApplicationController
   end
 
   def destroy
+    @plan = Plan.find(params[:id])
+    @plan.destroy
+    flash[:notice] = "スケジュールを削除しました"
+    redirect_to :plans
   end
 end
