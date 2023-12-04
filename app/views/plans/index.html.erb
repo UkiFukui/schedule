@@ -29,7 +29,7 @@
           <td><%= "○" if plan.all_day %></td>
           <td><%= plan.updated_at.to_s(:datetime_jp) %></td>
           <td><%= link_to "詳細", plan %></td>
-          <td>編集</td>
+          <td><%= link_to "編集", [:edit, plan] %></td>
           <td>削除</td>
         </tr>
       <% end %>

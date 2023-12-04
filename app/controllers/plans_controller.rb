@@ -23,9 +23,17 @@ class PlansController < ApplicationController
   end
 
   def edit
+    @plan = Plan.find(params[:id])
   end
 
   def update
+    @plan = Plan.find(params[:id])
+    if @plan.update(params.require(:plan).permit(:title, :start_date, :finish_date, :all_day, :memo))
+      # flash[:notice] = "スケジュールを更新しました"
+      redirect_to :plans
+    else
+      render "edit"
+    end
   end
 
   def destroy
