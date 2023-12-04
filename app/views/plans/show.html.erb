@@ -4,20 +4,20 @@
 
   <div class="table-header">
     <h2><%= @plan.title %></h2>
-    <button type="button" class="btn" id="btn-edit">
+    <%= link_to [:edit, @plan], class: "btn", id: "btn-edit" do %>
       <%= image_tag "pen.png" %> 編集
-    </button>
+    <% end %>
   </div>
 
   <div id="table-show-container">
     <table class="table" id="table-show">
       <tr>
         <th>開始日</th>
-        <td><%= @plan.start_date %></td>
+        <td><%= @plan.start_date.strftime("%Y/%m/%d") %></td>
       </tr>
       <tr>
         <th>終了日</th>
-        <td><%= @plan.finish_date %></td>
+        <td><%= @plan.finish_date.strftime("%Y/%m/%d") %></td>
       </tr>
       <tr>
         <th>終日</th>

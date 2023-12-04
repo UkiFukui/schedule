@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_12_02_113808) do
+ActiveRecord::Schema.define(version: 2023_12_04_052906) do
 
   create_table "plans", force: :cascade do |t|
     t.string "title", null: false
-    t.date "start_date", null: false
-    t.date "finish_date", null: false
+    t.datetime "start_date", null: false
+    t.datetime "finish_date", null: false
     t.boolean "all_day", default: false
     t.string "memo"
     t.datetime "created_at", precision: 6, null: false

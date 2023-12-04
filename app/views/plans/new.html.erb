@@ -2,6 +2,8 @@
 
   <h2>予定の新規追加</h2>
 
+  <%= render 'shared/error', obj: @plan %>
+
   <div class="form">
     <%= form_with model: @plan do |f| %>
       <div class="form-group">

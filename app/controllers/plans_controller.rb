@@ -11,7 +11,7 @@ class PlansController < ApplicationController
   def create
     @plan = Plan.new(params.require(:plan).permit(:title, :start_date, :finish_date, :all_day, :memo))
     if @plan.save
-      # flash[:notice] = "スケジュールを登録しました"
+      flash[:notice] = "スケジュールを登録しました"
       redirect_to :plans
     else
       render "new"
@@ -29,7 +29,7 @@ class PlansController < ApplicationController
   def update
     @plan = Plan.find(params[:id])
     if @plan.update(params.require(:plan).permit(:title, :start_date, :finish_date, :all_day, :memo))
-      # flash[:notice] = "スケジュールを更新しました"
+      flash[:notice] = "スケジュールを更新しました"
       redirect_to :plans
     else
       render "edit"
