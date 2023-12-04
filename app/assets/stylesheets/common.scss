@@ -61,6 +61,12 @@ h2 {
   padding: 20px;
 }
 
+#flash-index {
+  background-color: green;
+  color: #FFF;
+  font-weight: bold;
+}
+
 #total-number {
   font-weight: bold;
 }
@@ -72,6 +78,11 @@ h2 {
 
 .new-edit-container {
   max-width: 600px;
+}
+.flash-new-edit {
+  background-color: red;
+  color: #FFF;
+  font-weight: bold;
 }
 
 .form {
@@ -117,6 +128,9 @@ min-height: 100px;
 .button-area {
   display: flex;
   justify-content: right;
+}
+.button-area * {
+  margin-left: 10px;
 }
 
 // 詳細ページ
