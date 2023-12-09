@@ -2,9 +2,8 @@ class Plan < ApplicationRecord
   validates :title, presence: true, length: {maximum: 20}
   validates :start_date, presence: :true
   validates :finish_date, presence: :true
-    validate :greater_than_start_date?
+  validate :greater_than_start_date?
   validates :memo, length: {maximum:500}
-
 
   private
 
