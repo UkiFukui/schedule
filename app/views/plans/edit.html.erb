@@ -1,0 +1,46 @@
+<div class="container new-edit-container">
+
+  <h2>予定を編集してください</h2>
+
+  <% if flash[:notice] %>
+    <p class="flash-new-edit"><%= flash[:notice] %></p>
+  <% end %>
+
+  <%= render 'shared/error', obj: @plan %>
+
+  <div class="form">
+    <%= form_with model: @plan do |f| %>
+      <div class="form-group">
+        <%= f.label :title, "タイトル", class: "required" %>
+        <%= f.text_field :title, placeholder: "タイトル" %>
+      </div>
+
+      <div class="date-area">
+        <div class="form-group date-form">
+          <%= f.label :start_date, "開始日", class: "required" %>
+          <%= f.date_field :start_date %>
+        </div>
+        <div class="form-group date-form">
+          <%= f.label :finish_date, "終了日", class: "required" %>
+          <%= f.date_field :finish_date %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.check_box :all_day %>
+        <%= f.label :all_day, "終日の場合はチェックを入れます" %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :memo, "スケジュールメモ" %>
+        <%= f.text_area :memo, placeholder: "メモを入力する" %>
+      </div>
+
+      <div class="form-group button-area">
+        <%= link_to "キャンセル", :plans, class: "btn btn-cancel" %>
+        <%= f.submit "保存", class: "btn btn-save" %>
+      </div>
+    <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,159 @@
+body {
+  background-color: #EEEEEE;
+  font-size: 13px;
+}
+
+header {
+  background-color: #000066;
+  color: #FFF;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+}
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+// ボタン設定
+.btn {
+  font-size: 13px;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+#btn-new, .btn-save {
+  background-color: #000066;
+  color: #FFF;
+}
+.btn-cancel {
+  border-color: #EEEEEE;
+}
+#btn-edit {
+  color: #000066;
+  border-color: #000066;
+}
+
+// トップページ
+#index-container {
+  width: fit-content;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+#table-footer {
+  background-color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#flash-index {
+  background-color: green;
+  color: #FFF;
+  font-weight: bold;
+}
+
+#total-number {
+  font-weight: bold;
+}
+#today-date {
+  color: #BBBBBB;
+}
+
+// 新規作成ページ
+
+.new-edit-container {
+  max-width: 600px;
+}
+.flash-new-edit {
+  background-color: red;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.form {
+  background-color: #FFF;
+  padding: 20px;
+  margin-top: 20px;
+}
+.form-group {
+  margin: 5px;
+}
+
+.required:after {
+  color: red;
+  content: " *";
+}
+
+.date-area {
+  display: flex;
+  justify-content: space-between;
+}
+.date-form {
+  display: inline-block;
+  width: 47%;
+}
+
+div label:first-child {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+div input:last-child:not(.btn),
+textarea {
+  width: 100%;
+  border: 1px #EEEEEE solid;
+  height: 40px;
+  padding: 10px;
+}
+
+textarea {
+min-height: 100px;
+}
+
+.button-area {
+  display: flex;
+  justify-content: right;
+}
+.button-area * {
+  margin-left: 10px;
+}
+
+// 詳細ページ
+#show-container {
+  max-width: 600px;
+}
+
+#back-to-index {
+  font-weight: bold;
+}
+
+#table-show-container {
+  background-color: #FFF;
+  padding: 20px;
+}
+
+#table-show {
+  border: 1px #EEEEEE solid;
+}
+#table-show th, #table-show td {
+  padding: 20px;
+}
+#table-show th {
+  background-color: #F8F8FF;
+  width: 144px;
+}
