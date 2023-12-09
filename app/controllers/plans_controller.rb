@@ -12,7 +12,7 @@ class PlansController < ApplicationController
     @plan = Plan.new(schedule_params)
     if @plan.save
       flash[:notice] = "スケジュールを登録しました"
-      redirect_to :plans
+      redirect_to plans_path
     else
       flash.now[:notice] = "スケジュールの登録に失敗しました"
       render "new"
@@ -31,7 +31,7 @@ class PlansController < ApplicationController
     @plan = Plan.find(params[:id])
     if @plan.update(schedule_params)
       flash[:notice] = "スケジュールを更新しました"
-      redirect_to :plans
+      redirect_to plans_path
     else
       flash.now[:notice] = "スケジュールの更新に失敗しました"
       render "edit"
@@ -42,7 +42,7 @@ class PlansController < ApplicationController
     @plan = Plan.find(params[:id])
     @plan.destroy
     flash[:notice] = "スケジュールを削除しました"
-    redirect_to :plans
+    redirect_to plans_path
   end
 
   private
